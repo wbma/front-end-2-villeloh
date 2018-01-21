@@ -1,4 +1,27 @@
 <div>{{this.localData}}</div>
 <hr>
-<div>{{this.remoteData}}</div>
-<hr>
+
+<table style="width:100%" *ngFor="let entry of this.remoteData">
+  <tr>
+    <th>File Id</th>
+    <th>User Id</th>
+    <th>Filename</th>
+    <th>Filesize</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Media Type</th>
+    <th>Mime Type</th>
+    <th>Time Added</th>
+  </tr>
+  <tr>
+    <td>{{entry['file_id']}}</td>
+    <td>{{entry['user_id']}}</td>
+    <td>{{entry['filename']}}</td>
+    <td>{{entry['filesize']}}</td>
+    <td>{{entry['title']}}</td>
+    <td>{{entry['description']}}</td>
+    <td>{{entry['media_type']}}</td>
+    <td>{{entry['mime_type']}}</td>
+    <td>{{entry['time_added']}}</td>
+  </tr>
+</table>
