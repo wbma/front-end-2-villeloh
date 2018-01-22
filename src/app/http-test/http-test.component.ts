@@ -28,22 +28,8 @@ export class HttpTestComponent implements OnInit {
 
   loadRemoteJson() {
 
-    console.log('loading remote json');
-
-    interface FileObject {
-      file_id: Number;
-      user_id: Number;
-      filename: string;
-      filesize: string;
-      title: string;
-      description: string;
-      media_type: string;
-      mime_type: string;
-      time_added: string;
-    }
-
     this.http.get('http://media.mw.metropolia.fi/wbma/media')
-    .subscribe((res: Response) => { this.remoteData = res; console.log('res: ' + res[0]['file_id']); });
+    .subscribe((res: Response) => { this.remoteData = res; });
   }
 
 }
